@@ -6,7 +6,7 @@ df = pd.read_csv(url)
 
 # Select the countries you want
 countries = ['United States', 'United Kingdom', 'Japan', 'Brazil', 'China', 'Germany', 'Switzerland']
-df = df[df['Country'].isin(countries)]
+df = df[df['Country Name'].isin(countries)]
 
 # Convert wide format to long format
 df_long = df.melt(id_vars='Country', var_name='Year', value_name='GDP')
