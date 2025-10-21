@@ -1,11 +1,11 @@
 import pandas as pd
 
 # Load CSV file (from GitHub or local)
-url = "https://raw.githubusercontent.com/username/repo/main/data.csv"  # replace with your actual URL
+url = "data/API_NY.GDP.MKTP.CD_DS2_en_csv_v2_115195.csv"  # replace with your actual URL
 df = pd.read_csv(url)
 
 # Select the countries you want
-countries = ['USA', 'Canada', 'Japan']
+countries = ['United States', 'United Kingdom', 'Japan', 'Brazil', 'China', 'Germany', 'Switzerland']
 df = df[df['Country'].isin(countries)]
 
 # Convert wide format to long format
